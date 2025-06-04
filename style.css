@@ -1,0 +1,299 @@
+body{
+    width: 900px;
+    margin-right:auto ;
+    margin-left: auto;
+    display: block;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center ;
+    background-color: #3789d2 ;
+}
+p{
+    margin-top: 20px;
+}
+hr{
+    margin-bottom: 40px;
+}
+.square{
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    border-radius: 10px;
+
+}
+.grid-container {
+    display: grid;
+    grid-auto-flow: column;            /* Llenar columnas primero */
+    grid-template-rows: repeat(2, auto); /* 5 elementos por columna */
+    justify-content: center;           /* Centrar el contenido */
+    align-items: center;               /* Centrar verticalmente cada celda */
+}
+
+
+#one{
+    box-shadow: rgba(0,0,0,0.25) 0px 25px 50px 12px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    transition: 1s ease 0s;
+    transform: perspective(80px) rotateY(15deg);
+}
+#one:hover{
+    background-color: blue;
+    transform: perspective(3000px)
+    rotateY(5deg);
+      animation: mover 5s infinite;
+
+}
+#two{
+    cursor: pointer;
+    background-color: rgb(0, 39, 112);
+    transform: rotateX(51deg) rotateZ(43deg);
+    transform-style: preserve-3d;
+    box-shadow: 
+    1px 1px 0px 1px #219ebc
+    -1px 0 28px rgba(34,33 , 81,0.01 )
+    28px 28px 28px 0 rgb(34,33,81,0.25);
+     transition: 
+     .4s ease-in-out transform
+     .4s ease-in-out box-shadow;
+}
+#two:hover{
+    transform: translate3d(0px,-15px,0px)
+    rotateX(51deg)
+    rotateZ(43deg);
+    box-shadow:
+     1px 1px 0px 1px #219ebc
+    -1px 0 28px rgba(34,33 , 81,0.01 )
+    54px 54px 28px -10 rgb(34,33,81,0.15);
+    animation: soyveloz 10s ease-in-out infinite;
+}
+#three{
+    cursor:pointer;
+    background-color: blueviolet;
+    transform: perspective(900px) rotateX(60deg) scale(0.7);
+    box-shadow: 0px 20px 100px #636363;
+    transition: 0.5s ease all;
+   
+}
+#three.animate{
+    transform: rotate(0deg)
+    scale(1)
+    translateY(10px); animation: gordo 4s ease-in-out alternate;
+}
+#four{
+    transition: 1s ease-in-out;
+    background-color: #82e5fd;
+}
+#four:hover{
+    background-color: #07313b;
+    transform: rotateY(180deg);
+    animation: uwu 10s ease-out infinite;
+}
+#five{
+    background-color: cadetblue;
+    transform: perspective(800px)
+    rotateY(25deg)
+    scale(0.9)
+    rotateX(10deg);
+    filter: blur(2px);
+    transition: 0.6s ease all;
+}
+#five:hover{
+    transform: perspective(800px)
+    rotateY(-15deg)
+    translateY(50px)
+    rotateX(10deg)
+    scale(1);
+    filter: blur(0);
+    opacity: 1s;
+    animation: explotar 10s ease-in-out infinite;
+}
+@keyframes mover {
+    0%{transform: translateX(0px);}
+
+    100%{transform: translateX(-400px);}
+}
+
+@keyframes soyveloz {
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-400px);}
+}
+@keyframes soyveloz2 {
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(400px);}
+}
+@keyframes gordo {
+    0%{transform: scale(1, 1) ;}
+    50%{transform: translateX(500px)}
+    75%{transform: translateX(-500px);}
+    80%{transform: rotate(180deg);}
+    100%{transform: scale(2,2);}
+}
+@keyframes gordo2 {
+    0%{transform: scale(1, 1) ;}
+    50%{transform: translateX(500px);
+        color: cadetblue;}
+    75%{transform: translateX(-500px);
+        color: beige;}
+    80%{transform: rotate(180deg);
+        color: aqua;}
+    100%{transform: scale(2,2);}
+}
+@keyframes uwu {
+    0%{transform: skew(0deg);}
+    100%{transform: skew(90deg);}
+    
+}
+@keyframes explotar {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  30% {
+    transform: scale(1.5) rotate(10deg);
+    opacity: 0.8;
+    filter: blur(1px);
+  }
+  60% {
+    transform: scale(2.5) rotate(-15deg);
+    opacity: 0.3;
+    filter: blur(3px);
+  }
+  100% {
+    transform: scale(4) rotate(30deg);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+#six{
+    box-shadow: rgba(0,0,0,0.25) 0px 25px 50px 12px;
+    cursor: pointer;
+    background-color: rgb(0, 54, 155);
+    transition: 1s ease 0s;
+    transform: perspective(80px) rotateY(-15deg);
+}
+#six:hover{
+    background-color: blue;
+    transform: perspective(-3000px)
+    rotateY(-5deg);
+      animation: mover 5s infinite;
+
+}
+#seven{
+    cursor: pointer;
+    background-color: rgb(86, 131, 216);
+    transform: rotateX(41deg) rotateZ(43deg);
+    transform-style: preserve-3d;
+    box-shadow: 
+    1px 1px 0px 1px #219ebc
+    -1px 0 28px rgba(34,33 , 81,0.01 )
+    28px 28px 28px 0 rgb(34,33,81,0.25);
+     transition: 
+     .4s ease-in-out transform
+     .4s ease-in-out box-shadow;
+}
+#seven:hover{
+    transform: translate3d(0px,-15px,0px)
+    rotateX(51deg)
+    rotateZ(43deg);
+    box-shadow:
+     1px 1px 0px 1px #219ebc
+    -1px 0 28px rgba(34,33 , 81,0.01 )
+    54px 54px 28px -10 rgb(34,33,81,0.15);
+    animation: soyveloz2 10s ease-in-out infinite;
+}
+#ocho{
+    cursor:pointer;
+    background-color: rgb(162, 110, 211);
+    transform: perspective(900px) rotateX(60deg) scale(0.7);
+    box-shadow: 0px 20px 100px #636363;
+    transition: 0.5s ease all;
+   
+}
+#ocho:hover{
+    transform: rotate(0deg)
+    scale(1)
+    translateY(10px); animation: gordo2 4s ease-in-out alternate;
+}
+#nine{
+    transition: 1s ease-in-out;
+    background-color: #025a70;
+}
+#nine:hover{
+    background-color: #004758;
+    transform: rotateY(60deg);
+    animation: uwu2  10s ease-out infinite;
+}
+#ten{
+    background-color: rgb(3, 107, 110);
+    transform: perspective(800px)
+    rotateY(25deg)
+    scale(0.9)
+    rotateX(10deg);
+    filter: blur(8px);
+    transition: 0.6s ease all;
+}
+#ten:hover{
+    transform: perspective(800px)
+    rotateY(-15deg)
+    translateY(50px)
+    rotateX(10deg)
+    scale(1);
+    filter: blur(0);
+    opacity: 1s;
+    animation: holi 10s ease-in-out infinite;
+}
+
+@keyframes holi {
+    0%{transform: scale3D(40deg);
+    background-color: aquamarine;
+    }
+100%{
+    transform: scale3d(80deg);
+    background-color: antiquewhite;
+}
+    
+}
+
+/* Media Queries para dispositivos pequeños y medianos */
+
+@media screen and (max-width: 1024px) {
+  body {
+    width: 90%;
+  }
+  .grid-container {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 95%;
+    margin-top: 30px;
+  }
+  .square {
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .square {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
